@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promptify - Маркетплейс промптов</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #121212; color: white; }
+        .glass { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); }
+        .cyber-blue { color: #0070FF; }
+        .bg-cyber-blue { background-color: #0070FF; }
+    </style>
+</head>
+<body>
+    <div class="flex min-h-screen">
+        <aside class="w-64 border-r border-white/10 p-6 hidden md:block">
+            <div class="mb-10 text-2xl font-black tracking-tighter italic cyber-blue">PROMPTIFY</div>
+            <nav class="space-y-4 text-gray-400">
+                <div class="text-white font-bold">Главная</div>
+                <div class="hover:text-white cursor-pointer">Все промпты</div>
+                <div class="pt-4 text-xs font-bold uppercase opacity-50 text-white">Категории</div>
+                <div class="hover:text-white cursor-pointer">Для WB/Ozon</div>
+                <div class="hover:text-white cursor-pointer">Фотореализм</div>
+                <div class="hover:text-white cursor-pointer">Логотипы</div>
+            </nav>
+        </aside>
+
+        <main class="flex-1 overflow-y-auto">
+            <header class="sticky top-0 z-50 p-6 glass flex justify-between items-center">
+                <input type="text" placeholder="Поиск промптов..." class="bg-white/10 border border-transparent focus:border-[#0070FF] rounded-full px-6 py-2 w-96 outline-none transition-all">
+                <button class="bg-white text-black px-6 py-2 rounded-full font-bold hover:bg-cyber-blue hover:text-white transition-all">Продать промпт</button>
+            </header>
+
+            <section class="p-8">
+                <h1 class="text-4xl font-black mb-8 uppercase italic tracking-tighter">Выбор редакции</h1>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+                    <div class="relative h-64 rounded-3xl overflow-hidden group">
+                        <img src="https://images.unsplash.com/photo-1675271591211-126ad94e495d?auto=format&fit=crop&w=800" class="w-full h-full object-cover transition-transform group-hover:scale-110 duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent p-8 flex flex-col justify-end">
+                            <span class="bg-cyber-blue text-xs font-bold w-fit px-2 py-1 rounded mb-2">HOT</span>
+                            <h2 class="text-3xl font-black">NEON CYBERPUNK</h2>
+                        </div>
+                    </div>
+                    <div class="relative h-64 rounded-3xl overflow-hidden group">
+                        <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800" class="w-full h-full object-cover transition-transform group-hover:scale-110 duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent p-8 flex flex-col justify-end">
+                            <span class="bg-cyber-blue text-xs font-bold w-fit px-2 py-1 rounded mb-2">TRENDING</span>
+                            <h2 class="text-3xl font-black">ABSTRACT LIQUID</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 class="text-2xl font-bold mb-6 uppercase tracking-tight">Топ чарты</h2>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                    <div class="bg-[#181818] p-4 rounded-2xl hover:bg-[#252525] transition-all group">
+                        <div class="aspect-square rounded-xl overflow-hidden mb-4 relative">
+                            <img src="https://images.unsplash.com/photo-1558317374-067fb5f30001?w=400&h=400&fit=crop" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity">
+                                <div class="bg-cyber-blue p-3 rounded-full shadow-lg">▶</div>
+                            </div>
+                        </div>
+                        <div class="font-bold text-white mb-1">Minimalist Vacuum</div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-xs text-gray-500">MJ v6</span>
+                            <span class="text-cyber-blue font-bold text-sm">199 ₽</span>
+                        </div>
+                    </div>
+                    </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
